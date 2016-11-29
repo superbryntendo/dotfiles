@@ -1,0 +1,53 @@
+config defaultToCurrentScreen true
+config nudgePercentOf screenSize
+config resizePercentOf screenSize
+
+# Shows app icons and background apps, spreads icons in the same place.
+config windowHintsShowIcons true
+config windowHintsIgnoreHiddenWindows false
+config windowHintsSpread true
+
+bind space:ctrl;alt;cmd hint ASDFGHJKLQWERTYUIOPCVBN
+bind d:ctrl;shift grid padding:5 0:8,8 1:12,8
+
+# Resize Bindings
+bind right:alt       resize +10% +0
+bind left:alt        resize -10% +0
+bind up:alt          resize +0   -10%
+bind down:alt        resize +0   +10%
+bind right:ctrl;alt  resize -10% +0 top-right
+bind left:ctrl;alt   resize +10% +0 top-right
+bind up:ctrl;alt     resize +0   +10% top-right
+bind down:ctrl;alt   resize +0   -10% top-right
+
+# Push Bindings
+
+bind w:ctrl push left  bar-resize:screenSizeX/2
+bind e:ctrl push right bar-resize:screenSizeX/2
+bind t:ctrl push left  bar-resize:screenSizeX
+
+# Move Bindings
+
+bind 1:ctrl move screenOriginX;screenOriginY screenSizeX/4;screenSizeY
+
+bind 2:ctrl move screenOriginX+screenSizeX/4;screenOriginY screenSizeX/4;screenSizeY
+
+bind 3:ctrl move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/4;screenSizeY
+
+bind 4:ctrl move screenOriginX+3*screenSizeX/4;screenOriginY screenSizeX/4;screenSizeY
+
+
+# Nudge Bindings
+bind right:shift;alt nudge +10% +0
+bind left:shift;alt  nudge -10% +0
+bind up:shift;alt    nudge +0   -10%
+bind down:shift;alt  nudge +0   +10%
+
+# Throw Bindings
+bind 1:ctrl;alt         throw 0 resize
+bind 2:ctrl;alt         throw 1 resize
+bind 3:ctrl;alt         throw 2 resize
+bind right:ctrl;alt;cmd throw right resize
+bind left:ctrl;alt;cmd  throw left  resize
+bind up:ctrl;alt;cmd    throw up    resize
+bind down:ctrl;alt;cmd  throw down  resize
